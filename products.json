@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Black Denim Bucket Hat",
+    "image": "https://www.fashionchingu.com/wp-content/uploads/2022/06/Jimin-BTS-Black-Denim-Bucket-Hat-4.jpg",
+    "price": 21.9,
+    "id": "1"
+  },
+  {
+    "name": "Lilac Sparkling Shirt|Suga – BTS",
+    "image": "https://www.fashionchingu.com/wp-content/uploads/2022/02/Suga-BTS-Sparkling-Lilac-Shirt-1-600x800.jpg",
+    "price": 22.9,
+    "id": "2"
+  },
+  {
+    "name": "Beige Suit Pants|Taehyung – BTS",
+    "image": "https://www.fashionchingu.com/wp-content/uploads/2022/05/Taehyung-BTS-Beige-Suit-Pants-3-300x400.jpg",
+    "price": 25.9,
+    "id": "3"
+  },
+  {
+    "name": "White Textured Bag|Jennie – BlackPink",
+    "image": "https://www.fashionchingu.com/wp-content/uploads/2021/08/Jennie-BlackPink-White-Textured-Bag-22.jpg",
+    "price": 26.9,
+    "id": "4"
+  },
+  {
+    "name": "Green Fluffy Checkered Cardiga|J-Hope – BTS",
+    "image": "https://www.fashionchingu.com/wp-content/uploads/2022/07/Green-Fluffy-Checkered-Cardigan-J-Hope-BTS-5-300x400.jpg",
+    "price": 29.9,
+    "id": "5"
+  },
+  {
+    "name": "Brown Messenger Canvas Bag|RM – BTS",
+    "image": "https://www.fashionchingu.com/wp-content/uploads/2022/07/RM-BTS-Brown-Messenger-Canvas-Bag-1-300x400.jpg",
+    "price": 26.8,
+    "id": "6"
+  },
+  {
+    "name": "Black Fleece Jacket|Jisung – Stray Kids",
+    "image": "https://www.fashionchingu.com/wp-content/uploads/2020/11/Jisung-Stray-Kids-Black-Fleece-Jacket-32-e1643801231763-300x400.jpg",
+    "price": 29.9,
+    "id": "7"
+  },
+  {
+    "name": "Blue Baggy Ripped Jeans|J-Hope – BTS",
+    "image": "https://www.fashionchingu.com/wp-content/uploads/2022/05/J-Hope-BTS-Blue-Baggy-Ripped-Jeans-28-300x400.jpg",
+    "price": 36.9,
+    "id": "8"
+  },
+  {
+    "name": "Green Checkered Bear Cardigan|Beomgyu – TXT",
+    "image": "https://www.fashionchingu.com/wp-content/uploads/2021/07/Green-Checkered-Bear-Cardigan-Beomgyu-TXT-4-e1626275257978-300x400.jpg",
+    "price": 41,
+    "id": "9"
+  },
+  {
+    "name": "White ‘A’ Heart Sweatshirt|Taeil – NCT",
+    "image": "https://www.fashionchingu.com/wp-content/uploads/2022/04/Taeil-%E2%80%93-NCT-A-Heart-Sweater-3-e1649344236905-300x400.png",
+    "price": 29.5,
+    "id": "10"
+  },
+  {
+    "name": "Green Oversized Cargo Pants|Taehyung – BTS",
+    "image": "https://www.fashionchingu.com/wp-content/uploads/2021/12/Taehyung-BTS-Oversized-Cargo-Pants-3-300x400.png",
+    "price": 35,
+    "id": "11"
+  },
+  {
+    "name": "Grey Canvas Crossbody Bag|Jungkook – BTS",
+    "image": "https://www.fashionchingu.com/wp-content/uploads/2021/06/Jungkook-BTS-Grey-Canvas-Crossbody-Bag-13-300x400.jpg",
+    "price": 80.9,
+    "id": "12"
+  }
+]
