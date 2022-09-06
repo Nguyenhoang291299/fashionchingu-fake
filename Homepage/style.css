@@ -440,6 +440,7 @@ header {
     width: 1170px;
     max-width: 100%;
     margin: auto;
+    height: auto;
 }
 .benefit-wrapper {
     width: 50%;
@@ -469,4 +470,61 @@ header {
     font-size: 15px;
     margin-bottom: 5px;
     color: #2B2A1F;
+}
+/* ----- footer-top ----- */
+footer {
+    position: relative;
+    display: inline-block;
+    background-color: var(--silver-white);
+    width: 100%;
+}
+.footer-top {
+    padding: 80px 0;
+    margin: auto;
+    width: 1170px;
+    height: auto;
+}
+.footer-top div {
+    float: left;
+    width: 25%;
+}
+.footer-top form input{
+    height: 40px;
+    border: 1px solid #ccc;
+    padding: 0 15px;
+    max-width: 100%;
+    width: 100%;
+    border-radius: 40px ;
+}
+.footer-top div:nth-child(3) ul li{
+    float: left;
+    width: 65px;
+    margin: 0 3px 3px 0;
+    background-color: #ffffff;
+    height: 60px;
+    padding: 0 6px;
+    text-align: center;
+}
+.footer-top div:nth-child(3) ul li img{
+    max-width: 100%;
+}
+.footer-top div:last-child .social{
+    margin: 0 5px;
+    padding: 8px;
+    width: 43px;
+    text-align: center;
+    border-radius: 50%;
+    color: var(--white);
+}
+.footer-bot {
+    background-color: var(--white);
+    line-height: 1;
+    padding: 20px 0;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    margin-top: 20px;
+}
+.footer-bot div{
+    text-align: center;
 }
