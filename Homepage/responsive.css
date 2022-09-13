@@ -79,3 +79,18 @@
         color:  pink;
     }
 }
+@media (min-width) {
+    .popular_fs{
+        
+    }
+}
+/* @media (min-width: 620px) {
+    .popular_fs{
+        width: 610px;
+    }
+}
+@media (min-width: 480px) {
+    .popular_fs{
+        width: 460px;
+    }
+} */
