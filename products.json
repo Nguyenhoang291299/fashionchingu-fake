@@ -1,6 +1,6 @@
 [
   {
-   "name": "White Bare Chest Bodycon Dress",
+   "name": "Bare Chest Bodycon Dress",
    "price": 76,
    "condition": "new",
    "color": [
@@ -22,10 +22,10 @@
    "id": "1"
   },
   {
-   "name": "Black Checkered Dress",
+   "name": "Checkered Dress",
    "price": 30,
    "condition": "new",
-   "color": [],
+   "color": ["black"],
    "size": ["S","M","L"],
    "gender": "female",
    "imageLinkSub": {
@@ -37,10 +37,10 @@
    "id": "2"
   },
   {
-   "name": "Beige Double Breasted Suit Dress",
+   "name": "Double Breasted Suit Dress",
    "price": 25,
    "condition": "new",
-   "color": [],
+   "color": ["beige"],
    "size": ["S","M","L"],
    "gender": "female",
    "imageLinkSub": {

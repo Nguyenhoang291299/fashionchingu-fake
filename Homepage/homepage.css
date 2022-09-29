@@ -1,52 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 body {
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
     font-weight: 300;
     color: #2B2A1F;
 }
-:root {
-    --silver-white: #f6f6f8;
-    --silver: #878787; 
-    --pink: #FB7DC3;
-    --green: #008000;
-    --white: #ffffff;
-}
-a {
-    text-decoration: none;
-}
-li {
-    list-style: none;
-}
-span {
-    font-weight: 300;
-}
-.pr-15 {
-    padding: 0 15px;
-}
-.pr-16 {
-    padding: 0 16px;;
-}
-.pc-6 {
-    padding: 6px 0;
-}
-.bd-bot {
-    border-bottom: 1px solid #eee;
-}
-.hire {
-    display: none; 
-}
-.star {
-    color: yellow;
-}
-.ta-c{
-    text-align: center;
-}
+
 header {
     /* overflow: hidden; */
 }
