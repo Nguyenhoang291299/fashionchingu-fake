@@ -1,10 +1,10 @@
-const product = document.querySelector('.products');
+const products = document.querySelector('.products');
 // const condition = document.querySelector('.condition');
 // const img = document.querySelector('.img');
 // const name = document.querySelector('.name');
 // const price = document.querySelector('.price');
 
-const courseApi = 'https://6331c310cff0e7bf70f605da.mockapi.io/api/products';
+const courseApi = 'http://localhost:3000/products';
 
 
 function start() {
@@ -23,14 +23,26 @@ function getCourse(callback) {
 function renderCourse(courses) {
     
     const htmls = courses.map(course => {
+        // if (course.condition == "") {
+        //     return course.condition = undefined
+        // } else {
+            
+        // }
         return `
-        <div>
-            <div class="condition">${course.condition}</div>
-            <img src="" alt="" class="img">
-            <div class="name">${course.name}</div>
-            <div class="price">${course.price}$</div>
+        <div class="product">
+            <a href="#">
+                <div class="condition">${course.condition}</div>
+                <div  class="img-item">
+                    <img src="${course.image.imgSub0}" alt="">
+                </div>
+                <div class="mt_10">
+                    <div class="name">${course.name}</div>
+                    <div class="color">${course.color}</div>
+                    <div class="price">${course.price}$</div>
+                </div>
+            </a>
         </div>
         `;
     })
-    product.innerHTML = htmls.join('');
+    products.innerHTML = htmls.join('');
 }

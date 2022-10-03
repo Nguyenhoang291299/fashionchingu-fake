@@ -30,6 +30,9 @@ span {
 .pc-6 {
     padding: 6px 0;
 }
+.mt_10{
+    margin-top: 10px;
+}
 .bd-bot {
     border-bottom: 1px solid #eee;
 }

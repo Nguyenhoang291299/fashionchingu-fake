@@ -483,7 +483,7 @@ footer {
     float: left;
     width: 25%;
 }
-.footer-top form input{
+.footer-top .payment-card input{
     height: 40px;
     border: 1px solid #ccc;
     padding: 0 15px;
