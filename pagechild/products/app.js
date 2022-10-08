@@ -1,12 +1,14 @@
+
 const products = document.querySelector('.products');
-// const condition = document.querySelector('.condition');
+const prevPage = document.querySelector('.bi-caret-left-fill');
+const nextPage = document.querySelector('.bi-caret-right-fill');
+const clothing = document.querySelector("#clothing");
+
 // const img = document.querySelector('.img');
 // const name = document.querySelector('.name');
 // const price = document.querySelector('.price');
 
-const courseApi = 'http://localhost:3000/products';
-
-
+const courseApi = `http://localhost:3000/products`;
 function start() {
     getCourse(renderCourse);
 }
@@ -22,12 +24,7 @@ function getCourse(callback) {
 
 function renderCourse(courses) {
     
-    const htmls = courses.map(course => {
-        // if (course.condition == "") {
-        //     return course.condition = undefined
-        // } else {
-            
-        // }
+    const htmls = courses.map(course => {   
         return `
         <div class="product">
             <a href="#">
@@ -45,4 +42,15 @@ function renderCourse(courses) {
         `;
     })
     products.innerHTML = htmls.join('');
+    // filter products by type
+    clothing.addEventListener('change', ()=> {
+        // clothingValue.value
+        const clothingValue = clothing.value
+        courses.filter(course => { 
+            if(course.type === clothingValue)
+            {
+                product.classList.add("hire")
+            };
+        });
+    });
 }

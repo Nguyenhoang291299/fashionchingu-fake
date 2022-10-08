@@ -1,6 +1,9 @@
 body {
     letter-spacing: 0.5px;
 }
+.hire {
+    display: none;
+}
 .content .page-head {
     background-image: url(	https://www.fashionchingu.com/wp-content/uploads/2019/02/BlackPink-Clothes.jpg);
     background-position: center center;
@@ -68,13 +71,16 @@ form {
 }
 /* -----container----- */
 .container {
+    position: relative;
     width: 1170px;
     margin: auto;
     padding-top: 50px;
+    padding-bottom: 30px;
 }
 .products {
     display: flex;
     flex-wrap: wrap;
+    padding-bottom: 50px;
 }
 .product {
     width: 25%;
@@ -116,4 +122,26 @@ form {
 .product .price {
     font-size: 16px!important;
     color: var(--silver);
+}
+.pagination {
+    border-top: 1px solid #ddd;
+    text-align: center;
+    max-width: 100%;
+}
+.pagination .page-numbers {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 5px 10px;
+}
+.pagination .page-numbers li{
+    float: left;
+    text-align: center;
+    margin: 0 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    line-height: 30px;
+}
+.pagination .page-numbers li:focus{
+    background-color: #878CC2;
 }

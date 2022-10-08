@@ -179,31 +179,29 @@
                             <button type="submit">filter<i class="bi bi-funnel-fill"></i></button>
                         </div>
                         <div class="filter-list">
-                                <select name="filter" id="">
-                                    <option value="clothing" class="filter-item">-clothing-</option>
+                                <select name="filter" id="clothing">
+                                    <option value="" class="filter-item">-clothing-</option>
                                     <option value="dresses" class="filter-item">dresses</option>
-                                    <option value="skirts" class="filter-item">skirts</option>
                                     <option value="shirts" class="filter-item">shirts</option>
                                     <option value="T-shirts" class="filter-item">T-shirts</option>
                                     <option value="shorts" class="filter-item">shorts</option>
-                                    <option value="coats" class="filter-item">coats</option>
                                     <option value="sweater" class="filter-item">sweater</option>
                                     <option value="hoodies" class="filter-item">hoodies</option>
                                     <option value="jackets" class="filter-item">jackets</option>
-                                    <option value="pants" class="filter-item">pants & jeans</option>
+                                    <option value="pants & jeans" class="filter-item">pants & jeans</option>
                                     <option value="sweatshirts" class="filter-item">sweatshirts</option>
                                 </select>
                         </div>
                         <div class="filter-list">
-                                <select name="filter" id="">
-                                    <option value="price" class="filter-item">-price-</option>
+                                <select name="filter" id="price">
+                                    <option value="" class="filter-item">-price-</option>
                                     <option value="lowtohigh" class="filter-item">L to H</option>
                                     <option value="hightolow" class="filter-item">H to L</option>
                                 </select>
                         </div>
                         <div class="filter-list">
-                                <select name="filter" id="">
-                                    <option value="size" class="filter-item">-size-</option>
+                                <select name="filter" id="size">
+                                    <option value="" class="filter-item">-size-</option>
                                     <option value="S" class="filter-item">S</option>
                                     <option value="M" class="filter-item">M</option>
                                     <option value="L" class="filter-item">L</option>
@@ -213,16 +211,16 @@
                                 </select>
                         </div>
                         <div class="filter-list">
-                                <select name="filter" id="">
-                                    <option value="clothing" class="filter-item">-gender-</option>
+                                <select name="filter" id="gender">
+                                    <option value="" class="filter-item">-gender-</option>
                                     <option value="male" class="filter-item">male</option>
                                     <option value="female" class="filter-item">female</option>
                                     <option value="unisex" class="filter-item">unisex</option>
                                 </select>
                         </div>
                         <div class="filter-list">
-                                <select name="filter" id="">
-                                    <option value="color" class="filter-item">-color-</option>
+                                <select name="filter" id="color">
+                                    <option value="" class="filter-item">-color-</option>
                                     <option value="black" class="filter-item">black</option>
                                     <option value="white" class="filter-item">white</option>
                                     <option value="grey" class="filter-item">grey</option>
@@ -239,7 +237,15 @@
         </div>
         <div class="container">
             <div class="products"></div>
-        </div>
+            <div class="pagination">
+                <ul class="page-numbers">
+                    <li><a href=""><i class="bi bi-caret-left-fill"></i></a></li>
+                    <li><a href="http://localhost:3000/products?_page=1&_limit=18">1</a></li>
+                    <li><a href="http://localhost:3000/products?_page=2&_limit=18">2</a></li>
+                    <li><a href="#"><i class="bi bi-caret-right-fill"></i></a></li>
+                </ul>
+            </div>
+        </div>  
     </div>
     <footer>
         <div class="footer-top">
