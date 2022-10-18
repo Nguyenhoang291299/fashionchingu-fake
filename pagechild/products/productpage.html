@@ -174,12 +174,12 @@
             </nav>
             <div class="categories">
                 <div class="filter-container">
-                    <form action="" method="post">
+                    <form action="" method="post" id="input-form">
                         <div class="filter-list">
                             <button type="submit">filter<i class="bi bi-funnel-fill"></i></button>
                         </div>
                         <div class="filter-list">
-                                <select name="filter" id="clothing">
+                                <select name="clothing" class ="filter-product" id="clothing">
                                     <option value="" class="filter-item">-clothing-</option>
                                     <option value="dresses" class="filter-item">dresses</option>
                                     <option value="shirts" class="filter-item">shirts</option>
@@ -193,14 +193,15 @@
                                 </select>
                         </div>
                         <div class="filter-list">
-                                <select name="filter" id="price">
+                                <select name="price" class ="filter-product"  id="price">
                                     <option value="" class="filter-item">-price-</option>
-                                    <option value="lowtohigh" class="filter-item">L to H</option>
-                                    <option value="hightolow" class="filter-item">H to L</option>
+                                    <option value="low" class="filter-item">Low</option>
+                                    <option value="medium" class="filter-item">Medium</option>
+                                    <option value="high" class="filter-item">High</option>
                                 </select>
                         </div>
                         <div class="filter-list">
-                                <select name="filter" id="size">
+                                <select name="size" class ="filter-product"  id="size">
                                     <option value="" class="filter-item">-size-</option>
                                     <option value="S" class="filter-item">S</option>
                                     <option value="M" class="filter-item">M</option>
@@ -211,7 +212,7 @@
                                 </select>
                         </div>
                         <div class="filter-list">
-                                <select name="filter" id="gender">
+                                <select name="gender" class ="filter-product"  id="gender">
                                     <option value="" class="filter-item">-gender-</option>
                                     <option value="male" class="filter-item">male</option>
                                     <option value="female" class="filter-item">female</option>
@@ -219,7 +220,7 @@
                                 </select>
                         </div>
                         <div class="filter-list">
-                                <select name="filter" id="color">
+                                <select name="color" class ="filter-product"  id="color">
                                     <option value="" class="filter-item">-color-</option>
                                     <option value="black" class="filter-item">black</option>
                                     <option value="white" class="filter-item">white</option>
@@ -237,19 +238,6 @@
         </div>
         <div class="container">
             <div class="products">
-                <!-- <div class="product">
-                    <a href="#">
-                        <div class="condition"></div>
-                        <div  class="img-item">
-                            <img src="" alt="">
-                        </div>
-                        <div class="mt_10">
-                            <div class="name"></div>
-                            <div class="color"></div>
-                            <div class="price"></div>
-                        </div>
-                    </a>
-                </div> -->
             </div>
             <div class="filterProducts">
                 
