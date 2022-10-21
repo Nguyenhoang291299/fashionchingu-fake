@@ -1,4 +1,6 @@
 const products = document.querySelector('.products');
+const product = products.children;
+
 const inputForm = document.querySelector('#input-form');
 
 // const prevPage = document.querySelector('.bi-caret-left-fill');
@@ -21,10 +23,10 @@ function getCourse(callback) {
 }
 function renderCourse(courses) {
 
-    const htmls = courses.map(course => { 
+    const htmls = courses.map((course,index) => { 
         return `
-        <div class="product">
-            <a href="#">
+        <div class="product" data-id="${index}">
+            <a href="#"  onclick="showId(${index})"">
                 <div class="condition">${course.condition}</div>
                 <div  class="img-item">
                     <img src="${course.image.imgSub0}" alt="">
@@ -149,6 +151,7 @@ function renderCourse(courses) {
     //     )
     // }
     // sortPrices();
+
 }
 // lấy thông tin để lọc sản phẩm
 function getInfoFilter() {
@@ -164,10 +167,11 @@ function getInfoFilter() {
         for (const selectedProduct of selectedProducts) {
             formInputs = selectedProduct.value
             selectedProduct.addEventListener('change', ()=> {
-                console.log(formInputs);
-                console.dir(selectedProduct);
             })
         }
     }
 }
-getInfoFilter()
+getInfoFilter();
+function showId(a) {
+    console.log(a);
+  }
