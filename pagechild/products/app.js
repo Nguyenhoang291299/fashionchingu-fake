@@ -28,7 +28,7 @@ function renderCourse(courses) {
     showId(courses)
     const htmls = courses.map((course,index) => { 
         return `
-        <div class="product" data-id="${index}">
+        <div class="product" data-name="p-${index}">
             <a href="#">
                 <div class="condition">${course.condition}</div>
                 <div  class="img-item">
@@ -176,7 +176,7 @@ function renderCourse(courses) {
 // }
 // getInfoFilter();
 products.addEventListener('click', ()=> {
-    console.log(products.getAttribute('id'))
+    console.log(products.getAttribute('data-name'))
 })
 function showId(courses) {
     courses.forEach(element => {
