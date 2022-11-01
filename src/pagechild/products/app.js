@@ -1,19 +1,16 @@
 
 const products = document.querySelector('.products');
-const product = products.children;
 const inputForm = document.querySelector('#input-form');
 const header = document.querySelector('#header');
-console.log(header);
 
 // const prevPage = document.querySelector('.bi-caret-left-fill');
 // const nextPage = document.querySelector('.bi-caret-right-fill');
 // const clothing = document.querySelector("#clothing");
 const prices = document.querySelector("#price");
 
-const courseApi = `http://localhost:3000/products`;
+const courseApi = `http://localhost:3004/products`;
 function start() {
     getCourse(renderCourse);
-
 }
 start()
 
@@ -25,25 +22,35 @@ function getCourse(callback) {
         .then(callback) 
 }
 function renderCourse(courses) {
-    showId(courses)
+
     const htmls = courses.map((course,index) => { 
         return `
-        <div class="product" data-name="p-${index}">
+        <div class="product" data-id="${index}">
             <a href="#">
                 <div class="condition">${course.condition}</div>
                 <div  class="img-item">
                     <img src="${course.image.imgSub0}" alt="">
                 </div>
-                <div class="mt_10">
-                    <div class="name">${course.name}</div>
+                <div class="mt_10 name" style="font-size: 15px">${course.name}</div>
+                <div style="width: 50%; float: left">
                     <div class="color">${course.color}</div>
                     <div class="price">${course.price}$</div>
                 </div>
+                <div class="btn">
+                    <button class="btn-buy">Buy</button>
+                    <button class="btn-add"><i class="bi bi-cart-plus-fill"></i></button>
+                </div>
             </a>
-        </div>
-        `;
+        </div>`
     })
     products.innerHTML = htmls.join('');
+    function getBagBtn() {
+        const btn = [...document.querySelectorAll(".btn-add")]
+        console.log(btn);
+    };
+    // save data in localStorage
+    localStorage.setItem("products", JSON.stringify(courses))
+    getBagBtn()
         //filter products by type
          clothing.addEventListener('change', ()=> {
             const clothingValue = clothing.value;
@@ -154,34 +161,4 @@ function renderCourse(courses) {
         )
     }
     sortPrices();
-
 }
-// lấy thông tin để lọc sản phẩm
-// function getInfoFilter() {
-//     var formInputs = {
-//         clothing: '',
-//         price: '',
-//         size: '',
-//         gender: '',
-//         color: '',
-//     }
-//     if (inputForm) {
-//         const selectedProducts = inputForm.querySelectorAll('[name]');
-//         for (const selectedProduct of selectedProducts) {
-//             formInputs = selectedProduct.value
-//             selectedProduct.addEventListener('change', ()=> {
-//             })
-//         }
-//     }
-// }
-// getInfoFilter();
-products.addEventListener('click', ()=> {
-    console.log(products.getAttribute('data-name'))
-})
-function showId(courses) {
-    courses.forEach(element => {
-       if (element.id) {
-           
-       }
-    });
-  }

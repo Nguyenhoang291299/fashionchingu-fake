@@ -45,7 +45,7 @@
                 <div class="mid__second">
                     <div class="action">
                         <div class="action__icon"><i class="bi bi-search"></i></div>
-                        <div class="action__icon"><a href=""><i class="bi bi-person-circle"></i></a></div>
+                        <div class="action__icon"><a href="/src/authentication/login/login.html"><i class="bi bi-person-circle"></i></a></div>
                         <div class="action__icon"><div class="add_wishlist ta-c"><i class="bi bi-heart"></i></div></div>
                         <div class="action__icon">
                             <i class="bi bi-bag"></i>
@@ -167,7 +167,7 @@
         <div class="shop-sidebar">
             <nav class="breadcrumb">
                 <div >
-                    <a href="/Homepage/index.html">Home</a>
+                    <a href="/index.html">Home</a>
                     <i class="bi bi-chevron-double-right"></i>
                     <a href="#">KPOP clothes</a>
                 </div>
@@ -239,9 +239,6 @@
         <div class="container">
             <div class="products">
             </div>
-            <div class="filterProducts">
-                
-            </div>
             <div class="pagination">
                 <ul class="page-numbers">
                     <li><a href=""><i class="bi bi-caret-left-fill"></i></a></li>
@@ -251,6 +248,45 @@
                 </ul>
             </div>
         </div>  
+        <div class="product-cart">
+            <div class="cart">
+                <div class="close-cart"><i class="bi bi-x-lg"></i></div>
+                <h2>your cart</h2>
+                <div class="cart-content">
+                    <div class="cart-item">
+                        <table>
+                            <tr>
+                                <th></th>
+                                <th>name</th>
+                                <th>price</th>
+                                <th>quantity</th>
+                            </tr>
+                            <tr>
+                                <td><img src="/images/Checkered-Dress-Jisoo-11.jpg" alt="" style="width: 100%"></td>
+                                <td>
+                                    <div>
+                                        <div class="name-item">Bare Chest Bodycon Dress</div>
+                                        <div class="color-item"><div></div></div>
+                                        <div class="size-item">XL</div>
+                                    </div>
+                                </td>
+                                <td>45.55$</td>
+                                <td>
+                                    <div class="quantity-item"><input type="number" min="0"></div>
+                                    <button class="trash-item"><i class="bi bi-trash-fill"></i></button>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <br style="border: 1px solid #000;">
+                    <div class="total-items">
+                        <b>Total:</b>
+                        <span>29.29$</span>
+                    </div>
+                </div>
+                <button class="purchase">purchase</button>
+            </div>
+        </div>
     </div>
     <footer>
         <div class="footer-top">
@@ -321,6 +357,6 @@
         </div>
 
     </footer>
-    <script src="/app.js"></script>
+    <script src="/pagechild/products/app.js"></script>
 </body>
 </html>
