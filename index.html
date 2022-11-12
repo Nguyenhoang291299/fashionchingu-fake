@@ -51,6 +51,7 @@
                         <div class="action__icon"><div class="add_wishlist ta-c"><i class="bi bi-heart"></i></div></div>
                         <div class="action__icon">
                             <i class="bi bi-bag"></i>
+                            <span class="count">0</span>
                             <span class="sumary">
                                 (
                                     <span>00.0$</span>
@@ -855,6 +856,45 @@
                 <div class="btn_seller"><button>Access All Our YouTube Videos</button></div>
             </div>
         </div>
+        <div class="product-cart">
+            <div class="cart">
+                <div class="close-cart"><i class="bi bi-x-lg"></i></div>
+                <h2>your cart</h2>
+                <div class="cart-content">
+                    <div class="cart-item">
+                        <table>
+                            <tr>
+                                <th></th>
+                                <th>name</th>
+                                <th>price</th>
+                                <th>quantity</th>
+                            </tr>
+                            <tr>
+                                <td><img src="/images/Checkered-Dress-Jisoo-11.jpg" alt="" style="width: 100%"></td>
+                                <td>
+                                    <div>
+                                        <div class="name-item">Bare Chest Bodycon Dress</div>
+                                        <div class="color-item"><div></div></div>
+                                        <div class="size-item">XL</div>
+                                    </div>
+                                </td>
+                                <td>45.55$</td>
+                                <td>
+                                    <div class="quantity-item"><input type="number" min="0"></div>
+                                    <button class="trash-item"><i class="bi bi-trash-fill"></i></button>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <br style="border: 1px solid #000;">
+                    <div class="total-items">
+                        <b>Total:</b>
+                        <span>00.00$</span>
+                    </div>
+                </div>
+                <button class="purchase">purchase</button>
+            </div>
+        </div>
     </div>
     <footer>
         <div class="footer-top">
@@ -928,6 +968,6 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="../node_modules/slick-carousel/slick/slick.min.js"></script>
-    <script src="./app.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>

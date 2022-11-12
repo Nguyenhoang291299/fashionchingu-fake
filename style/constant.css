@@ -45,3 +45,9 @@ span {
 .ta-c{
     text-align: center;
 }
+.mr-10 {
+    margin: 0 5px;
+}
+.mc-5 {
+    margin: 5px 0;
+}

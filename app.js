@@ -1,11 +1,15 @@
 const openMenu = document.querySelector('.bi-list');
-const closeMenu = document.querySelector('.bi-x-lg');
+const closeMenu = document.querySelector('.action__icon .bi-x-lg');
 const bgSidebar = document.querySelector('.bg-sidebar');
 const submenuRes = document.querySelectorAll('.sub-menu-items b');
 const subChilds = document.querySelectorAll('.sub-menu-items ul');
 const btnSearch = document.querySelector('.bi-search');
 const closeSearch = document.querySelector('.sf-close');
 const headerSearch = document.querySelector('.header_search');
+const openBag = document.querySelector(".bi-bag");
+const closeBag = document.querySelector(".close-cart .bi-x-lg");
+const listCart = document.querySelector(".product-cart");
+
 // responsive menu side bar
 openMenu.onclick = function () {
     bgSidebar.style.display = "block";
@@ -36,3 +40,13 @@ $('.slide-content').slick({
         }
     }]
   });
+// OC cart
+function handleOCCart() {
+    openBag.onclick = function () {
+        listCart.style.display = "block";
+    } 
+    closeBag.onclick = function () {
+        listCart.style.display = "none";
+    }
+}
+handleOCCart()

@@ -5,7 +5,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-/* responsive tablet width 1025px */
+
 @media (min-width: 740px) and (max-width: 1024px) {
     
     .bg-sidebar {
@@ -15,7 +15,6 @@
         top: 0;
         background-color: rgba(0, 0, 0, 0.7);
         z-index: 1006;
-
     }
     .sidebar {
         width: 320px;
@@ -79,18 +78,3 @@
         color:  pink;
     }
 }
-@media (min-width) {
-    .popular_fs{
-        
-    }
-}
-/* @media (min-width: 620px) {
-    .popular_fs{
-        width: 610px;
-    }
-}
-@media (min-width: 480px) {
-    .popular_fs{
-        width: 460px;
-    }
-} */
