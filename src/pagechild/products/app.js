@@ -62,14 +62,6 @@ function renderCourse(courses) {
         })
     };
     getBagBtn()
-    const setCartValue = (carts) => {
-        let tempTotal = 0;
-        let itemTotal = carts.length;
-        carts.map(cart => {
-            // tempTotal += cart.price *
-        })
-        count.innerText = itemTotal
-    }
     const addCartItem = (cartItems) => {
         const div = cartItems.map(cartItem => (
             `
@@ -83,7 +75,7 @@ function renderCourse(courses) {
                 </div>
             </div>
             <div class="price-item mr-10">${cartItem.price}$</div>
-            <div class="mr-10" style="width: 25%">
+            <div>
                 <div class="quantity-item"><input type="number" min="0"></div>
                 <button class="trash-item" data-id="${cartItem.id}"><i class="bi bi-trash-fill"></i></button>
             </div>
@@ -95,15 +87,25 @@ function renderCourse(courses) {
         const itemCarts = JSON.parse(localStorage.getItem("products"))
         return itemCarts.find(itemCart => itemCart.id === id)
     }
+    const setCartValue = (carts) => {
+        let amount;
+        let tempTotal;
+        let itemTotal = carts.length;
+
+        count.innerText = itemTotal
+    }
     const removeCart =(cartItems) => {
+        // cartItems = JSON.parse(localStorage.getItem("carts"))
         const btnTrashs = [...document.querySelectorAll(".trash-item")];
         btnTrashs.map(btnTrash => {
             const id = btnTrash.dataset.id
-           btnTrash.addEventListener("click", (e)=> {
-               cartCtn.removeChild(e.target.parentElement.parentElement)
+            btnTrash.addEventListener("click", ()=> {
+                cartCtn.removeChild(btnTrash.parentElement.parentElement);
+                
            })
         })
     }
+
     // save data in localStorage
     localStorage.setItem("products", JSON.stringify(courses))
     
