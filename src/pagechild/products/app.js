@@ -75,10 +75,10 @@ function renderCourse(courses) {
                 </div>
             </div>
             <div class="price-item mr-10">${cartItem.price}$</div>
-            <div>
+            
                 <div class="quantity-item"><input type="number" min="0"></div>
                 <button class="trash-item" data-id="${cartItem.id}"><i class="bi bi-trash-fill"></i></button>
-            </div>
+            
         </div>`
         ))
         cartCtn.innerHTML = div.join('')
@@ -91,17 +91,22 @@ function renderCourse(courses) {
         let amount;
         let tempTotal;
         let itemTotal = carts.length;
-
+        cartCtn.addEventListener("change", (e)=> {
+            amount = e.target.value    
+            const s = carts.reduce((a,b) => a + b.price * amount,0)
+            console.log(s);
+        })
         count.innerText = itemTotal
     }
     const removeCart =(cartItems) => {
-        // cartItems = JSON.parse(localStorage.getItem("carts"))
         const btnTrashs = [...document.querySelectorAll(".trash-item")];
         btnTrashs.map(btnTrash => {
             const id = btnTrash.dataset.id
             btnTrash.addEventListener("click", ()=> {
-                cartCtn.removeChild(btnTrash.parentElement.parentElement);
-                
+                cartCtn.removeChild(btnTrash.parentElement);
+                let carts = cartItems.filter(cartItem => cartItem.id !== id)
+                localStorage.setItem("carts", JSON.stringify(carts))
+                setCartValue(carts);
            })
         })
     }
