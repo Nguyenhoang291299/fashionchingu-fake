@@ -7,6 +7,7 @@ const closeBag = document.querySelector(".close-cart .bi-x-lg");
 const listCart = document.querySelector(".product-cart");
 const count = document.querySelector(".count");
 const cartCtn = document.querySelector(".cart-content");
+const totalItems = document.querySelector(".total-items")
 const courseApi = `http://localhost:3002/products`;
 function start() {
     getCourse(renderCourse);
@@ -52,16 +53,32 @@ function renderCourse(courses) {
             // let inCart = carts.find(cart => cart.id === id)
             btn.onclick = (e) => {
                 e.preventDefault();
-                let cartItems = {...getProduct(id)};
+                let cartItems = {...getProduct(id), amount: 1};
                 carts = [...carts,cartItems];
                 localStorage.setItem("carts", JSON.stringify(carts));
                 setCartValue(carts);
                 addCartItem(carts);
-                removeCart(carts);
             }
         })
     };
     getBagBtn()
+
+    const getProduct = (id) => {
+        const itemCarts = JSON.parse(localStorage.getItem("products"))
+        return itemCarts.find(itemCart => itemCart.id === id)
+    }
+
+    const setCartValue = (carts) => {
+        let tempTotal= 0;
+        let itemTotal = 0;
+        carts.map(cart => {
+            tempTotal += cart.price * cart.amount;
+            itemTotal += cart.amount;
+        })
+        totalItems.innerText = parseFloat(tempTotal.toFixed(2)) + "$";
+        count.innerText = itemTotal;
+    }
+
     const addCartItem = (cartItems) => {
         const div = cartItems.map(cartItem => (
             `
@@ -76,44 +93,52 @@ function renderCourse(courses) {
             </div>
             <div class="price-item mr-10">${cartItem.price}$</div>
             
-                <div class="quantity-item"><input type="number" min="0"></div>
+                <div class="quantity-item"><input type="number" min="1" value="1"></div>
                 <button class="trash-item" data-id="${cartItem.id}"><i class="bi bi-trash-fill"></i></button>
             
         </div>`
         ))
         cartCtn.innerHTML = div.join('')
     }
-    const getProduct = (id) => {
-        const itemCarts = JSON.parse(localStorage.getItem("products"))
-        return itemCarts.find(itemCart => itemCart.id === id)
+
+    function setupApp() {
+        const cart = localStorage.getItem("cart") ? JSON.stringify(carts) : [];
+        setCartValue(cart);
+        populate(cart);
     }
-    const setCartValue = (carts) => {
-        let amount;
-        let tempTotal;
-        let itemTotal = carts.length;
-        cartCtn.addEventListener("change", (e)=> {
-            amount = e.target.value    
-            const s = carts.reduce((a,b) => a + b.price * amount,0)
-            console.log(s);
-        })
-        count.innerText = itemTotal
-    }
-    const removeCart =(cartItems) => {
-        const btnTrashs = [...document.querySelectorAll(".trash-item")];
-        btnTrashs.map(btnTrash => {
-            const id = btnTrash.dataset.id
-            btnTrash.addEventListener("click", ()=> {
-                cartCtn.removeChild(btnTrash.parentElement);
-                let carts = cartItems.filter(cartItem => cartItem.id !== id)
-                localStorage.setItem("carts", JSON.stringify(carts))
-                setCartValue(carts);
-           })
-        })
+    setupApp()
+
+    function populate(carts) {
+        carts.forEach(cart => {addCartItem(cart)})
     }
 
+    const cartLogic = () => {
+        clearCart()
+    }
+    const clearCart = () => {
+        let cartItems = carts.map(cart => cart.id);
+        cartItems.forEach(id => removeItem(id));
+        while (cartCtn.children.length > 0) {
+            cartCtn.removeChild()
+        }
+    }
+    const removeItem = (id) => {
+        carts = carts.filter(cart => cart.id === id);
+        setCartValue(carts);
+        const cart = localStorage.getItem("cart") ? JSON.stringify(carts) : [];
+
+    }
+    cartLogic()
     // save data in localStorage
     localStorage.setItem("products", JSON.stringify(courses))
-    
+    cartCtn.addEventListener("click", (e)=> {
+        if (e.target.classList.contains("trash-item")) {
+            let trashItem = e.target;
+            let id = trashItem.dataset.id;
+            cartCtn.removeChild(trashItem.parentElement);
+            removeItem(id)
+        }
+    })
 }
 // Open close cart
 function handleOCCart() {
