@@ -93,7 +93,7 @@ function renderCourse(courses) {
             </div>
             <div class="price-item mr-10">${cartItem.price}$</div>
             
-                <div class="quantity-item"><input type="number" min="1" value="1"></div>
+                <div class="quantity-item" data-id="${cartItem.id}"><input type="number" min="1" value="1"></div>
                 <button class="trash-item" data-id="${cartItem.id}"><i class="bi bi-trash-fill"></i></button>
             
         </div>`
@@ -125,12 +125,12 @@ function renderCourse(courses) {
     const removeItem = (id) => {
         carts = carts.filter(cart => cart.id === id);
         setCartValue(carts);
-        const cart = localStorage.getItem("cart") ? JSON.stringify(carts) : [];
-
+        const cart = localStorage.getItem("carts") ? JSON.stringify(carts) : [];
     }
     cartLogic()
     // save data in localStorage
     localStorage.setItem("products", JSON.stringify(courses))
+
     cartCtn.addEventListener("click", (e)=> {
         if (e.target.classList.contains("trash-item")) {
             let trashItem = e.target;
@@ -139,6 +139,23 @@ function renderCourse(courses) {
             removeItem(id)
         }
     })
+    const handleAmount = () => {
+        cartCtn.addEventListener("change", (e)=> {
+            // a.amount = e.target.value
+            const id = e.target.parentElement.dataset.id
+            const cart = localStorage.getItem("carts");
+            let cartss = JSON.parse(cart)
+            cartss.forEach(carts => {
+                if (carts.id === id) {
+                    carts.amount = e.target.value;
+                    localStorage.setItem("carts", JSON.stringify(cartss));
+                    setCartValue(cartss);
+                }
+            })
+
+        })
+    }
+    handleAmount();
 }
 // Open close cart
 function handleOCCart() {
