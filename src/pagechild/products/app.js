@@ -23,10 +23,10 @@ function getCourse(callback) {
         .then(callback) 
 }
 function renderCourse(courses) {
-    const coursess = JSON.parse(localStorage.getItem("products"));
-    const htmls = coursess.map((course) => { 
+    // handleFilter(courses)
+    const htmls = courses.map((course) => { 
         return `
-        <div class="product" >
+        <div class="product" data-id="${course.id}">
             <a href="#">
                 <div class="condition">${course.condition}</div>
                 <div  class="img-item">
@@ -45,7 +45,7 @@ function renderCourse(courses) {
         </div>`
     });
     products.innerHTML = htmls.join('');
-
+    
     const getBagBtn = () => {
         const btns = [...document.querySelectorAll(".btn-add")]
         btns.forEach((btn) => {
@@ -156,6 +156,39 @@ function renderCourse(courses) {
         })
     }
     handleAmount();
+
+    // filter product
+    function handleFilter() {
+        const formElement = document.querySelector("#input-form");
+        const products = [...document.querySelectorAll(".product")];
+        const courses = JSON.parse(localStorage.getItem("products"));
+
+        if (formElement) {
+            var inputs = formElement.querySelectorAll("[name]");
+            for (const input of inputs) {
+                if (input.name === "clothing") {
+                    // console.dir(input);
+                    input.addEventListener("change", ()=> {
+                        courses.filter(course => {
+                            if (course.type === input.value) {
+                                products.map(product => {
+                                    console.log(product === course);
+                                    // product.classList.add("hire")
+                                    // if (product.dataset.id === course.id) {
+                                    //     console.log(product);
+                                    //     product.classList.add("hire")
+                                    // } else {
+                                    //     product.classList.remove("hire")
+                                    // }
+                                })
+                            }
+                        })
+                    })
+                }
+            }
+        }
+    }
+    handleFilter()
 }
 // Open close cart
 function handleOCCart() {
@@ -167,3 +200,4 @@ function handleOCCart() {
     }
 }
 handleOCCart()
+
