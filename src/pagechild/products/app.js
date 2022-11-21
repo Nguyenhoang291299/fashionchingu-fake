@@ -1,3 +1,4 @@
+// import handleSearch from "../../js/search";
 
 const products = document.querySelector('.products');
 const inputForm = document.querySelector('#input-form');
@@ -7,8 +8,9 @@ const closeBag = document.querySelector(".close-cart .bi-x-lg");
 const listCart = document.querySelector(".product-cart");
 const count = document.querySelector(".count");
 const cartCtn = document.querySelector(".cart-content");
-const totalItems = document.querySelector(".total-items")
+const totalItems = document.querySelector(".total-items");
 const courseApi = `http://localhost:3002/products`;
+
 function start() {
     getCourse(renderCourse);
 }
@@ -23,7 +25,7 @@ function getCourse(callback) {
         .then(callback) 
 }
 function renderCourse(courses) {
-    // handleFilter(courses)
+
     const htmls = courses.map((course) => { 
         return `
         <div class="product" data-id="${course.id}">
@@ -45,7 +47,7 @@ function renderCourse(courses) {
         </div>`
     });
     products.innerHTML = htmls.join('');
-    
+
     const getBagBtn = () => {
         const btns = [...document.querySelectorAll(".btn-add")]
         btns.forEach((btn) => {
@@ -172,14 +174,12 @@ function renderCourse(courses) {
                         courses.filter(course => {
                             if (course.type === input.value) {
                                 products.map(product => {
-                                    console.log(product === course);
-                                    // product.classList.add("hire")
-                                    // if (product.dataset.id === course.id) {
-                                    //     console.log(product);
-                                    //     product.classList.add("hire")
-                                    // } else {
-                                    //     product.classList.remove("hire")
-                                    // }
+                                    if (product.dataset.id === course.id) {
+                                        product.classList.toggle("hire")
+                                    } else {
+                                        product.classList.toggle("hire")
+
+                                    }
                                 })
                             }
                         })
@@ -189,15 +189,16 @@ function renderCourse(courses) {
         }
     }
     handleFilter()
+    handleSearch(courses)
 }
 // Open close cart
-function handleOCCart() {
-    openBag.onclick = function () {
-        listCart.style.display = "block";
-    } 
-    closeBag.onclick = function () {
-        listCart.style.display = "none";
-    }
-}
-handleOCCart()
+// function handleOCCart() {
+//     openBag.onclick = function () {
+//         listCart.style.display = "block";
+//     } 
+//     closeBag.onclick = function () {
+//         listCart.style.display = "none";
+//     }
+// }
+// handleOCCart()
 
