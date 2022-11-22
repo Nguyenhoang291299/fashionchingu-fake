@@ -1,0 +1,45 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#content {
+    width: 1140px;
+    margin: auto;
+    padding: 30px 0;
+}
+.thumbnail_item {
+    display: block;
+    margin-bottom: 5px;
+}
+.thumbnail_item img {
+    width: 100%;
+}
+.product-image {
+    position: relative;
+}
+.product-image .discount {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    padding: 3px 5px;
+    background-color: gold;
+    color: #fff;
+    text-align: center;
+}
+.product-image img {
+    max-width: 100%;
+}
+.pro_detail_name {
+    font-weight: 400;
+}
+.current-price {
+    font-size: 30px;
+    color: #6722ff;
+    font-weight: 500;
+    padding-right: 10px;
+}
+.old-price {
+    font-size: 20px;
+}
