@@ -7,6 +7,11 @@
     width: 1140px;
     margin: auto;
     padding: 30px 0;
+
+}
+.active {
+    background-color: #6722ff;
+    color: #fff;
 }
 .thumbnail_item {
     display: block;
@@ -40,6 +45,140 @@
     font-weight: 500;
     padding-right: 10px;
 }
-.old-price {
-    font-size: 20px;
+
+.element-size {
+    float: left;
+    min-width: 35px;
+    height: 35px;
+    margin: 0 10px;
+    text-align: center;
+    line-height: 29px;
+    border: 1px solid #ccc;
+    position: relative;
+    cursor: pointer;
+}
+.element-color {
+    float: left;
+    min-width: 35px;
+    height: 35px;
+    background-color: aqua;
+    margin: 0 10px;
+    border: 2px solid #ccc;
+    position: relative;
+    cursor: pointer;
+    border-radius: 25px;
+}
+.active-color {
+    border: 2px solid #000;
+}
+.amount {
+    max-width: 50px;
+    height: 30px;
+}
+.addtocart, .buy {
+    width: fit-content;
+    height: 30px;
+    padding: 20px 10px;
+    text-align: center;
+    line-height: 0px;
+    background-color: cornflowerblue;
+    border: none;
+    color: #fff;
+    border-radius: 25px;
+}
+.product-single {
+    border-bottom: 1px solid #000;
+    padding-bottom: 50px;
+}
+h1 {
+    text-transform: capitalize;
+}
+form label {
+    font-size: 15px;
+    font-weight: 400;
+}
+form input {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid #000;
+    margin-left: 5px;
+}
+form textarea {
+    display: block;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid #000;
+    margin-top: 10px;
+    padding: 10px;
+
+}
+.submit-cancel {
+    float: right;
+    display: flex;
+    margin: 10px;
+}
+.cancel-cmt {
+    border: none;
+    background-color: white;
+    width: fit-content;
+    height: fit-content;
+    margin-right: 10px;
+    border-radius: 25px;
+}
+.cancel-cmt:hover {
+    cursor: pointer;
+    color: #ccc;
+    background-color: rgba(103, 34, 255, 0.6);
+}
+
+.submit-cmt {
+    text-transform: capitalize;
+    width: 150px;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    background-color: #6722ff;
+}
+.submit-cmt:hover {
+    cursor: pointer;
+    background-color: cornflowerblue;
+}
+.avt-cmt {
+    width: 50px;
+    height: 50px;
+    background-color: aqua;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 25px;
+    line-height: 48px;
+    padding: 0px!important;
+}
+.dialog-box {
+    width: fit-content;
+    height: fit-content;
+    background-color: cadetblue;
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 5px;
+}
+.toolbar {
+    margin-left: 105px;
+}
+.toolbar button {
+    font-size: 15px;
+    border: none;
+    background-color: #fff;
+    width: fit-content;
+    color: #333;
+    margin: 0 5px;
+    text-transform: none;
+}
+.toolbar span {
+    font-size: 11px;
+}
+.list-cmt {
+    border-top: 1px solid #000;
+    padding-top: 50px;
 }

@@ -182,7 +182,7 @@
         </div>
     </header>
     <div id="content">
-        <div class="grid wire">
+        <div class="product-single grid wire">
             <div class="row">
                 <div class="col l-1 m-1 c-12">
                     <ul class="product-single__thumbnails">
@@ -203,20 +203,94 @@
                             <h1 class="pro_detail_name">Double Breasted Suit Dress</h1>
                         </div>
                         <div class="pro-price mc-10">
-                            <span class="current-price"> 32.33$</span>
-                            <del class="old-price">32.33$</del>
+                            <span class="current-price"> $32.33</span>
+                            <del class="old-price fz-20">$32.33</del>
                         </div>
                         <div class="product-varicants">
                             <div class="pro-var-size">
-                                <b>size</b>
-                                
+                                <b class="fz-20">Size:</b>
+                                <div class="select-swap-sz mc-10">
+                                    <div class="element-size">M</div>
+                                    <div class="element-size">L</div>
+                                    <div class="element-size active">XL</div>
+                                </div>
                             </div>
                         </div>
-                        <div class="pro-quantity"></div>
-                        <div></div>
+                        <div class="product-color">
+                            <div class="pro-var-color">
+                                <b class="fz-20">Color:</b>
+                                <div class="select-swap-color mc-10">
+                                    <div class="element-color"></div>
+                                    <div class="element-color"></div>
+                                    <div class="element-color active-color"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pro-quantity">
+                            <div class="pro-var-amount">
+                                <b class="fz-20">Amount:</b>
+                                <input type="number" name="amount" class="amount" value="1" min="1">
+                            </div>
+                        </div>
+                        <div class="pro-action">
+                            <button type="button" class="addtocart">Add to cart</button>
+                            <button type="button" class="buy">Buy</button>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="grid wire mc-50 feedback">
+            <div class="row">
+                <div class="customer-reviews col l-9 m-9">
+                    <h1>customer reviews</h1>
+                    <form action="" method="post" class="grid wire mc-50">
+                        <div class="row mc-10">
+                            <div class="col l-6">
+                                <label for="cus-name">Name:</label>
+                                <input type="text" name="cus-name" id="cus-name" placeholder="Enter your name...">
+                            </div>
+                            <!-- <div class="col l-6">
+                                <label for="cus-email">Email:</label>
+                                <input type="email" name="cus-email" id="cus-email" placeholder=" Enter your email...">
+                            </div> -->
+                        </div>
+                        <div class="col l-12">
+                            <label for="cus-cmt">Comment:</label>
+                            <textarea name="cus-cmt" id="cus-cmt" cols="90" rows="5" placeholder="Enter your comment..."></textarea>
+                        </div>
+                        <div class="submit-cancel">
+                        <input type="submit" value="Cancel" class="cancel-cmt">
+                        <input type="submit" value="submit" class="submit-cmt">
+                        </div>
+                    </form>
+                    <!-- <div class="line"></div> -->
+                    <br>
+                    <div class="list-cmt">
+                        <div class="row">
+                            <div class="col l-1 m-1 avt-cmt">H</div>
+                            <div class="col l-9 m-9 dialog-box">
+                                <div class="name-cmt">Nguyen Hoang</div>
+                                <div class="content-cmt">
+                                    <p>Hi Camila - Kindly know that we need 3-7 business days for processing your order. Once shipped, you'll receive the shipment notification containing the tracking information. The estimated transit time to Mexico is15-30 days. Best regards.</p>
+                                </div>
+                            </div>
+                            <div class="style-scope col l-1 m-1">
+                                <i class="bi bi-three-dots-vertical" style="font-size: 20px;"></i>
+                            </div>
+                            <div class="toolbar">
+                                <i class="bi bi-suit-heart"></i>
+                                <button>answer</button>
+                                <span> 1 ngay truoc</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="other-clothes col l-3 m-3">
+                    <h1>other clothes</h1>
+                </div>
+            </div>
+            
         </div>
     </div>
     <footer>
